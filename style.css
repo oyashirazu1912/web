@@ -1,0 +1,29 @@
+body {
+  counter-reset: section; /* section カウンタをリセット */
+}
+
+h2 {
+	counter-increment: section; /* section カウンタをインクリメント */
+	counter-reset: subsection subsubsection; /* subsection, subsubsection カウンタをリセット */
+}
+h2::before {
+	content: counter(section) " "; /* section を挿入 */
+	word-spacing: 1em;
+}
+
+h3 {
+	counter-increment: subsection; /* subsection カウンタをインクリメント */
+	counter-reset: subsubsection; /* subsubsection カウンタをリセット */
+}
+h3::before {
+	content: counter(section) "." counter(subsection) " "; /* section.subsection を挿入 */
+	word-spacing: 1em;
+}
+
+h4 {
+	counter-increment: subsubsection; /* subsubsection カウンタをインクリメント */
+}
+h4::before {
+	content: counter(section) "." counter(subsection) "." counter(subsubsection) " "; /* section.subsection.subsubsection を挿入 */
+	word-spacing: 1em;
+}
