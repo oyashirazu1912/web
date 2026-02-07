@@ -27,3 +27,8 @@ h4::before {
 	content: counter(section) "." counter(subsection) "." counter(subsubsection) " "; /* section.subsection.subsubsection を挿入 */
 	word-spacing: 1em;
 }
+
+/* サイト全体のフォント指定 */
+body {
+	font-family: "Century Gothic", "Meiryo", "メイリオ", sans-serif;
+}
